@@ -26,13 +26,14 @@ import java.awt.event.KeyEvent;
 
 public class Start extends JFrame {
 
+	private Image startimg = new ImageIcon(getClass().getResource("icons/startbutton.png")).getImage().getScaledInstance(110, 110, Image.SCALE_SMOOTH);
+	private Image startimg1 = new ImageIcon(getClass().getResource("icons/start-button(2).png")).getImage().getScaledInstance(110, 110, Image.SCALE_SMOOTH);
+	private Image startimg2 = new ImageIcon(getClass().getResource("icons/start-button1.png")).getImage().getScaledInstance(110, 110, Image.SCALE_SMOOTH);
+	
+	
 	private JPanel contentPane;
 	private JTextField textField;
-	private Image startimg = new ImageIcon(ChoiceMenu.class.getResource("icons/start-button.png")).getImage().getScaledInstance(110, 110, Image.SCALE_SMOOTH);
-	private Image startimg1 = new ImageIcon(ChoiceMenu.class.getResource("icons/start-button(2).png")).getImage().getScaledInstance(110, 110, Image.SCALE_SMOOTH);
-	private Image startimg2 = new ImageIcon(ChoiceMenu.class.getResource("icons/start-button1.png")).getImage().getScaledInstance(110, 110, Image.SCALE_SMOOTH);
-	
-	JLabel lblNewLabel = new JLabel("JV Pop!");
+	JLabel lblNewLabel = new JLabel("JVGame");
 	int a = 0;
 
 	/**
