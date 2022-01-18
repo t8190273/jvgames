@@ -27,12 +27,12 @@ public class ChoiceMenu extends JFrame {
 	private Image myth5img = new ImageIcon(ChoiceMenu.class.getResource("icons/trident.png")).getImage().getScaledInstance(40, 40, Image.SCALE_SMOOTH);
 	private Image hist1img = new ImageIcon(ChoiceMenu.class.getResource("icons/history.png")).getImage().getScaledInstance(55, 55, Image.SCALE_SMOOTH);
 	private Image hist2img = new ImageIcon(ChoiceMenu.class.getResource("icons/history(1).png")).getImage().getScaledInstance(55, 55, Image.SCALE_SMOOTH);
-	private Image hist3img = new ImageIcon(ChoiceMenu.class.getResource("icons/antique.png")).getImage().getScaledInstance(55, 55, Image.SCALE_SMOOTH);
-	private Image geo1img = new ImageIcon(ChoiceMenu.class.getResource("icons/geography.png")).getImage().getScaledInstance(55, 55, Image.SCALE_SMOOTH);
+	private Image hist3img = new ImageIcon(ChoiceMenu.class.getResource("icons/antiquee.png")).getImage().getScaledInstance(55, 55, Image.SCALE_SMOOTH);
+	private Image geo1img = new ImageIcon(ChoiceMenu.class.getResource("icons/geographyy.png")).getImage().getScaledInstance(55, 55, Image.SCALE_SMOOTH);
 	private Image geo2img = new ImageIcon(ChoiceMenu.class.getResource("icons/planet-earth.png")).getImage().getScaledInstance(55, 55, Image.SCALE_SMOOTH);
-	private Image geo3img = new ImageIcon(ChoiceMenu.class.getResource("icons/greece.png")).getImage().getScaledInstance(55, 55, Image.SCALE_SMOOTH);
+	private Image geo3img = new ImageIcon(ChoiceMenu.class.getResource("icons/greecee.png")).getImage().getScaledInstance(55, 55, Image.SCALE_SMOOTH);
 	private Image geo4img = new ImageIcon(ChoiceMenu.class.getResource("icons/mountain.png")).getImage().getScaledInstance(55, 55, Image.SCALE_SMOOTH);
-	private Image cul1img = new ImageIcon(ChoiceMenu.class.getResource("icons/greece(1).png")).getImage().getScaledInstance(55, 55, Image.SCALE_SMOOTH);
+	private Image cul1img = new ImageIcon(ChoiceMenu.class.getResource("icons/greece1.png")).getImage().getScaledInstance(55, 55, Image.SCALE_SMOOTH);
 	private Image cul2img = new ImageIcon(ChoiceMenu.class.getResource("icons/olympic.png")).getImage().getScaledInstance(55, 55, Image.SCALE_SMOOTH);
 	private Image cul3img = new ImageIcon(ChoiceMenu.class.getResource("icons/olympus.png")).getImage().getScaledInstance(55, 55, Image.SCALE_SMOOTH);
 	private Image cul4img = new ImageIcon(ChoiceMenu.class.getResource("icons/parthenon.png")).getImage().getScaledInstance(55, 55, Image.SCALE_SMOOTH);
