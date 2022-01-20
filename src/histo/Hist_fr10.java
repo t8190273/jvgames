@@ -30,10 +30,10 @@ public class Hist_fr10 extends JFrame {
 			//omada btn//
 			ButtonGroup bg;
 			//apanthseis- sunolo 4//
-			String ap1[] = {"α) ο Κωνσταντίνος και Λικίνιος"}; /*Swsto*/
-		    String ap2[] = {"β) ο Λικίνιος και Μαξέντιος"};
-		    String ap3[] = {"γ) ο Γαλέριος και Μαξέντιος"};
-		    String ap4[] = {"δ) ο Γαλέριος και Λικίνιος"};
+			String ap1[] = {"\u03B1) \u03BF \u039A\u03C9\u03BD\u03C3\u03C4\u03B1\u03BD\u03C4\u03AF\u03BD\u03BF\u03C2 \u03BA\u03B1\u03B9 \u039B\u03B9\u03BA\u03AF\u03BD\u03B9\u03BF\u03C2"}; /*Swsto*/
+		    String ap2[] = {"\u03B2) \u03BF \u039B\u03B9\u03BA\u03AF\u03BD\u03B9\u03BF\u03C2 \u03BA\u03B1\u03B9 \u039C\u03B1\u03BE\u03AD\u03BD\u03C4\u03B9\u03BF\u03C2"};
+		    String ap3[] = {"\u03B3) \u03BF \u0393\u03B1\u03BB\u03AD\u03C1\u03B9\u03BF\u03C2 \u03BA\u03B1\u03B9 \u039C\u03B1\u03BE\u03AD\u03BD\u03C4\u03B9\u03BF\u03C2"};
+		    String ap4[] = {"\u03B4) \u03BF \u0393\u03B1\u03BB\u03AD\u03C1\u03B9\u03BF\u03C2 \u03BA\u03B1\u03B9 \u039B\u03B9\u03BA\u03AF\u03BD\u03B9\u03BF\u03C2"};
 		
 		
 		private static int score=0;
@@ -129,7 +129,7 @@ public class Hist_fr10 extends JFrame {
 	     lbl_q1.setBounds(26, 37, 192, 61);
 	     panel.add(lbl_q1);
 	     
-	     lbl_question = new JLabel("Ποιοι υπέγραψαν το Διάταγμα των Μεδιολάνων;");
+	     lbl_question = new JLabel("\u03A0\u03BF\u03B9\u03BF\u03B9 \u03C5\u03C0\u03AD\u03B3\u03C1\u03B1\u03C8\u03B1\u03BD \u03C4\u03BF \u0394\u03B9\u03AC\u03C4\u03B1\u03B3\u03BC\u03B1 \u03C4\u03C9\u03BD \u039C\u03B5\u03B4\u03B9\u03BF\u03BB\u03AC\u03BD\u03C9\u03BD;");
 	     lbl_question.setFont(new Font("Comic Sans MS", Font.PLAIN, 23));
 	     lbl_question.setForeground(new Color(102, 255, 255));
 	     lbl_question.setBounds(38, 109, 652, 70);
@@ -147,7 +147,7 @@ public class Hist_fr10 extends JFrame {
 				Hist_final frame1 = new Hist_final();
 				frame1.setVisible(true);
 				} else {
-					JOptionPane.showMessageDialog(null, "Παρακαλώ επιλέξτε μια από τις προτεινόμενες απαντήσεις");
+					JOptionPane.showMessageDialog(null, "\u03A0\u03B1\u03C1\u03B1\u03BA\u03B1\u03BB\u03CE \u03B5\u03C0\u03B9\u03BB\u03AD\u03BE\u03C4\u03B5 \u03BC\u03B9\u03B1 \u03B1\u03C0\u03CC \u03C4\u03B9\u03C2 \u03C0\u03C1\u03BF\u03C4\u03B5\u03B9\u03BD\u03CC\u03BC\u03B5\u03BD\u03B5\u03C2 \u03B1\u03C0\u03B1\u03BD\u03C4\u03AE\u03C3\u03B5\u03B9\u03C2");
 				}
 	     	}
 	     });
@@ -173,7 +173,7 @@ public class Hist_fr10 extends JFrame {
 		Exit.addMouseListener(new MouseAdapter() {
 		     @Override
 		     public void mouseClicked(MouseEvent arg0) {
-		    	 if(JOptionPane.showConfirmDialog(null, "Είστε σίγουροι πως θέλετε να κλείσετε την εφαρμογή?", "Κλείσιμο", JOptionPane.YES_NO_OPTION) == 0) {
+		    	 if(JOptionPane.showConfirmDialog(null, "\u0395\u03AF\u03C3\u03C4\u03B5 \u03C3\u03AF\u03B3\u03BF\u03C5\u03C1\u03BF\u03B9 \u03C0\u03C9\u03C2 \u03B8\u03AD\u03BB\u03B5\u03C4\u03B5 \u03BD\u03B1 \u03BA\u03BB\u03B5\u03AF\u03C3\u03B5\u03C4\u03B5 \u03C4\u03B7\u03BD \u03B5\u03C6\u03B1\u03C1\u03BC\u03BF\u03B3\u03AE?", "\u039A\u03BB\u03B5\u03AF\u03C3\u03B9\u03BC\u03BF", JOptionPane.YES_NO_OPTION) == 0) {
 		    		Hist_fr10.this.dispose(); 
 		    	 }
 		}
