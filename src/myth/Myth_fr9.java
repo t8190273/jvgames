@@ -30,10 +30,10 @@ public class Myth_fr9 extends JFrame {
 		//omada btn//
 		ButtonGroup bg;
 		//apanthseis- sunolo 4//
-		String ap1[] = {"α) Σφίγγα"};
-	    String ap2[] = {"β) Σκύλα"};
-	    String ap3[] = {"γ) Χάριβδη"};
-	    String ap4[] = {"δ) Κέρβερος"}; /*Swsto*/
+		String ap1[] = {"\u03B1) \u03A3\u03C6\u03AF\u03B3\u03B3\u03B1};
+	    String ap2[] = {"\u03B2) \u03A3\u03BA\u03CD\u03BB\u03B1"};
+	    String ap3[] = {"\u03B3) \u03A7\u03AC\u03C1\u03B9\u03B2\u03B4\u03B7"};
+	    String ap4[] = {"\u03B4) \u039A\u03AD\u03C1\u03B2\u03B5\u03C1\u03BF\u03C2"}; /*Swsto*/
 	
 	
 	private static int score=0;
@@ -130,7 +130,7 @@ public class Myth_fr9 extends JFrame {
 	     lbl_q1.setBounds(26, 37, 192, 61);
 	     panel.add(lbl_q1);
 	     
-	     lblNewLabel = new JLabel("Ποιο μυθικό πλάσμα φυλούσε τις πύλες του Άδη;");
+	     lblNewLabel = new JLabel("\u03A0\u03BF\u03B9\u03BF \u03BC\u03C5\u03B8\u03B9\u03BA\u03CC \u03C0\u03BB\u03AC\u03C3\u03BC\u03B1 \u03C6\u03C5\u03BB\u03BF\u03CD\u03C3\u03B5 \u03C4\u03B9\u03C2 \u03C0\u03CD\u03BB\u03B5\u03C2 \u03C4\u03BF\u03C5 \u0386\u03B4\u03B7;");
 	     lblNewLabel.setFont(new Font("Comic Sans MS", Font.PLAIN, 23));
 	     lblNewLabel.setForeground(new Color(102, 102, 204));
 	     lblNewLabel.setBounds(38, 109, 652, 70);
@@ -149,7 +149,7 @@ public class Myth_fr9 extends JFrame {
 					Myth_fr10 frame1 = new Myth_fr10();
 					frame1.setVisible(true);
 					} else {
-						JOptionPane.showMessageDialog(null, "Παρακαλώ επιλέξτε μια από τις προτεινόμενες απαντήσεις");
+						JOptionPane.showMessageDialog(null, "\u03A0\u03B1\u03C1\u03B1\u03BA\u03B1\u03BB\u03CE \u03B5\u03C0\u03B9\u03BB\u03AD\u03BE\u03C4\u03B5 \u03BC\u03B9\u03B1 \u03B1\u03C0\u03CC \u03C4\u03B9\u03C2 \u03C0\u03C1\u03BF\u03C4\u03B5\u03B9\u03BD\u03CC\u03BC\u03B5\u03BD\u03B5\u03C2 \u03B1\u03C0\u03B1\u03BD\u03C4\u03AE\u03C3\u03B5\u03B9\u03C2");
 					}
 	     	}
 	     });
@@ -175,7 +175,7 @@ public class Myth_fr9 extends JFrame {
 		Exit.addMouseListener(new MouseAdapter() {
 		     @Override
 		     public void mouseClicked(MouseEvent arg0) {
-		    	 if(JOptionPane.showConfirmDialog(null, "Είστε σίγουροι πως θέλετε να κλείσετε την εφαρμογή?", "Κλείσιμο", JOptionPane.YES_NO_OPTION) == 0) {
+		    	 if(JOptionPane.showConfirmDialog(null, "\u0395\u03AF\u03C3\u03C4\u03B5 \u03C3\u03AF\u03B3\u03BF\u03C5\u03C1\u03BF\u03B9 \u03C0\u03C9\u03C2 \u03B8\u03AD\u03BB\u03B5\u03C4\u03B5 \u03BD\u03B1 \u03BA\u03BB\u03B5\u03AF\u03C3\u03B5\u03C4\u03B5 \u03C4\u03B7\u03BD \u03B5\u03C6\u03B1\u03C1\u03BC\u03BF\u03B3\u03AE?", "\u039A\u03BB\u03B5\u03AF\u03C3\u03B9\u03BC\u03BF", JOptionPane.YES_NO_OPTION) == 0) {
 		    		Myth_fr9.this.dispose(); 
 		    	 }
 		}
