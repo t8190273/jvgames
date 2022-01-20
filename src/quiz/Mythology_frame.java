@@ -39,10 +39,10 @@ public class Mythology_frame extends JFrame {
 		//omada btn//
 		ButtonGroup bg;
 		//apanthseis- sunolo 4//
-		String ap1[] = {"α) Ήφαιστο"}; /*Swsto*/
-	    String ap2[] = {"β) Απόλλωνα"};
-	    String ap3[] = {"γ) Άρη"};
-	    String ap4[] = {"δ) Διόνυσο"};
+		String ap1[] = {"Ξ±) Ξ‰Ο†Ξ±ΞΉΟƒΟ„ΞΏ"}; /*Swsto*/
+	    String ap2[] = {"Ξ²) Ξ‘Ο€ΟΞ»Ξ»Ο‰Ξ½Ξ±"};
+	    String ap3[] = {"Ξ³) Ξ†ΟΞ·"};
+	    String ap4[] = {"Ξ΄) Ξ”ΞΉΟΞ½Ο…ΟƒΞΏ"};
 	
 	
 	private static int score=0;
@@ -138,7 +138,7 @@ public class Mythology_frame extends JFrame {
 	     lbl_q1.setBounds(26, 37, 192, 61);
 	     panel.add(lbl_q1);
 	     
-	     lblNewLabel = new JLabel(" Ποιο από τα παιδιά της πέταξε από τον Όλυμπο η Ήρα επειδή ντροπιάστηκε λόγω της ασχήμιας του;");
+	     lblNewLabel = new JLabel(" Ξ ΞΏΞΉΞΏ Ξ±Ο€Ο Ο„Ξ± Ο€Ξ±ΞΉΞ΄ΞΉΞ¬ Ο„Ξ·Ο‚ Ο€Ξ­Ο„Ξ±ΞΎΞµ Ξ±Ο€Ο Ο„ΞΏΞ½ ΞΞ»Ο…ΞΌΟ€ΞΏ Ξ· Ξ‰ΟΞ± ΞµΟ€ΞµΞΉΞ΄Ξ® Ξ½Ο„ΟΞΏΟ€ΞΉΞ¬ΟƒΟ„Ξ·ΞΊΞµ Ξ»ΟΞ³Ο‰ Ο„Ξ·Ο‚ Ξ±ΟƒΟ‡Ξ®ΞΌΞΉΞ±Ο‚ Ο„ΞΏΟ…;");
 	     lblNewLabel.setFont(new Font("Comic Sans MS", Font.PLAIN, 19));
 	     lblNewLabel.setForeground(new Color(102, 102, 204));
 	     lblNewLabel.setBounds(10, 109, 863, 70);
@@ -156,7 +156,7 @@ public class Mythology_frame extends JFrame {
 				Myth_fr2 frame1 = new Myth_fr2();
 				frame1.setVisible(true);
 				} else {
-					JOptionPane.showMessageDialog(null, "Παρακαλώ επιλέξτε μια από τις προτεινόμενες απαντήσεις");
+					JOptionPane.showMessageDialog(null, "Ξ Ξ±ΟΞ±ΞΊΞ±Ξ»Ο ΞµΟ€ΞΉΞ»Ξ­ΞΎΟ„Ξµ ΞΌΞΉΞ± Ξ±Ο€Ο Ο„ΞΉΟ‚ Ο€ΟΞΏΟ„ΞµΞΉΞ½ΟΞΌΞµΞ½ΞµΟ‚ Ξ±Ο€Ξ±Ξ½Ο„Ξ®ΟƒΞµΞΉΟ‚");
 				}
 	     	}
 	     });
@@ -182,7 +182,7 @@ public class Mythology_frame extends JFrame {
 		Exit.addMouseListener(new MouseAdapter() {
 		     @Override
 		     public void mouseClicked(MouseEvent arg0) {
-		    	 if(JOptionPane.showConfirmDialog(null, "Είστε σίγουροι πως θέλετε να κλείσετε την εφαρμογή?", "Κλείσιμο", JOptionPane.YES_NO_OPTION) == 0) {
+		    	 if(JOptionPane.showConfirmDialog(null, "Ξ•Ξ―ΟƒΟ„Ξµ ΟƒΞ―Ξ³ΞΏΟ…ΟΞΏΞΉ Ο€Ο‰Ο‚ ΞΈΞ­Ξ»ΞµΟ„Ξµ Ξ½Ξ± ΞΊΞ»ΞµΞ―ΟƒΞµΟ„Ξµ Ο„Ξ·Ξ½ ΞµΟ†Ξ±ΟΞΌΞΏΞ³Ξ®?", "ΞΞ»ΞµΞ―ΟƒΞΉΞΌΞΏ", JOptionPane.YES_NO_OPTION) == 0) {
 		    		Mythology_frame.this.dispose(); 
 		    	 }
 		}
