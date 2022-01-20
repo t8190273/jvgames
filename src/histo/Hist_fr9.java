@@ -30,10 +30,10 @@ public class Hist_fr9 extends JFrame {
 			//omada btn//
 			ButtonGroup bg;
 			//apanthseis- sunolo 4//
-			String ap1[] = {"α) ο Ιουστινιανός"};
-		    String ap2[] = {"β) ο Μέγας Κωνσταντίνος"}; /*Swsto*/
-		    String ap3[] = {"γ) ο Ηράκλειος"};
-		    String ap4[] = {"δ) ο Λέων Γ'"};
+			String ap1[] = {"\u03B1) \u03BF \u0399\u03BF\u03C5\u03C3\u03C4\u03B9\u03BD\u03B9\u03B1\u03BD\u03CC\u03C2"};
+		    String ap2[] = {"\u03B2) \u03BF \u039C\u03AD\u03B3\u03B1\u03C2 \u039A\u03C9\u03BD\u03C3\u03C4\u03B1\u03BD\u03C4\u03AF\u03BD\u03BF\u03C2"}; /*Swsto*/
+		    String ap3[] = {"\u03B3) \u03BF \u0397\u03C1\u03AC\u03BA\u03BB\u03B5\u03B9\u03BF\u03C2"};
+		    String ap4[] = {"\u03B4) \u03BF \u039B\u03AD\u03C9\u03BD \u0393"};
 		
 		
 		private static int score=0;
@@ -129,7 +129,7 @@ public class Hist_fr9 extends JFrame {
 	     lbl_q1.setBounds(26, 37, 192, 61);
 	     panel.add(lbl_q1);
 	     
-	     lbl_question = new JLabel("Ποιος αυτοκράτορας μετέφερε τη πρωτεύουσα από τη Ρώμη στη Νέα Ρώμη (Βυζάντιο);");
+	     lbl_question = new JLabel("\u03A0\u03BF\u03B9\u03BF\u03C2 \u03B1\u03C5\u03C4\u03BF\u03BA\u03C1\u03AC\u03C4\u03BF\u03C1\u03B1\u03C2 \u03BC\u03B5\u03C4\u03AD\u03C6\u03B5\u03C1\u03B5 \u03C4\u03B7 \u03C0\u03C1\u03C9\u03C4\u03B5\u03CD\u03BF\u03C5\u03C3\u03B1 \u03B1\u03C0\u03CC \u03C4\u03B7 \u03A1\u03CE\u03BC\u03B7 \u03C3\u03C4\u03B7 \u039D\u03AD\u03B1 \u03A1\u03CE\u03BC\u03B7 (\u0392\u03C5\u03B6\u03AC\u03BD\u03C4\u03B9\u03BF);");
 	     lbl_question.setFont(new Font("Comic Sans MS", Font.PLAIN, 22));
 	     lbl_question.setForeground(new Color(102, 255, 255));
 	     lbl_question.setBounds(10, 109, 873, 70);
@@ -147,7 +147,7 @@ public class Hist_fr9 extends JFrame {
 				Hist_fr10 frame1 = new Hist_fr10();
 				frame1.setVisible(true);
 				} else {
-					JOptionPane.showMessageDialog(null, "Παρακαλώ επιλέξτε μια από τις προτεινόμενες απαντήσεις");
+					JOptionPane.showMessageDialog(null, "\u03A0\u03B1\u03C1\u03B1\u03BA\u03B1\u03BB\u03CE \u03B5\u03C0\u03B9\u03BB\u03AD\u03BE\u03C4\u03B5 \u03BC\u03B9\u03B1 \u03B1\u03C0\u03CC \u03C4\u03B9\u03C2 \u03C0\u03C1\u03BF\u03C4\u03B5\u03B9\u03BD\u03CC\u03BC\u03B5\u03BD\u03B5\u03C2 \u03B1\u03C0\u03B1\u03BD\u03C4\u03AE\u03C3\u03B5\u03B9\u03C2");
 				}
 	     	}
 	     });
@@ -173,7 +173,7 @@ public class Hist_fr9 extends JFrame {
 		Exit.addMouseListener(new MouseAdapter() {
 		     @Override
 		     public void mouseClicked(MouseEvent arg0) {
-		    	 if(JOptionPane.showConfirmDialog(null, "Είστε σίγουροι πως θέλετε να κλείσετε την εφαρμογή?", "Κλείσιμο", JOptionPane.YES_NO_OPTION) == 0) {
+		    	 if(JOptionPane.showConfirmDialog(null, "\u0395\u03AF\u03C3\u03C4\u03B5 \u03C3\u03AF\u03B3\u03BF\u03C5\u03C1\u03BF\u03B9 \u03C0\u03C9\u03C2 \u03B8\u03AD\u03BB\u03B5\u03C4\u03B5 \u03BD\u03B1 \u03BA\u03BB\u03B5\u03AF\u03C3\u03B5\u03C4\u03B5 \u03C4\u03B7\u03BD \u03B5\u03C6\u03B1\u03C1\u03BC\u03BF\u03B3\u03AE?", "\u039A\u03BB\u03B5\u03AF\u03C3\u03B9\u03BC\u03BF", JOptionPane.YES_NO_OPTION) == 0) {
 		    		Hist_fr9.this.dispose(); 
 		    	 }
 		}
