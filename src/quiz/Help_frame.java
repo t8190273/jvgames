@@ -89,7 +89,7 @@ public class Help_frame extends JFrame {
 		scroll.setBorder(new EmptyBorder(0, 0, 0, 0));
 		scroll.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
 		scroll.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
-		scroll.setBounds(20, 106, 679, 425); 	
+		scroll.setBounds(20, 106, 698, 425); 	
 		JScrollBar verticalScrollBar = scroll.getVerticalScrollBar();
 	    JScrollBar horizontalScrollBar = scroll.getHorizontalScrollBar();
 	    verticalScrollBar.setValue(0);
