@@ -1,5 +1,9 @@
 package geo;
 
+import domain.User;
+import quiz.ScoreboardJFrame;
+import service.ScoreboardService;
+
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.EventQueue;
@@ -20,10 +24,11 @@ import javax.swing.border.CompoundBorder;
 import javax.swing.border.EmptyBorder;
 import javax.swing.border.LineBorder;
 
-public class Geo_fr10 extends JFrame {
+public class Geo_fr10 extends ScoreboardJFrame {
 
 	private JLabel lbl_q1;
     private JLabel lblNewLabel;
+	private final static Integer qID = 19;
 	
 	//radio btn//
 		JRadioButton btna, btnb, btnc, btnd;
@@ -42,26 +47,27 @@ public class Geo_fr10 extends JFrame {
 	
 	private JPanel contentPane;
 
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					Geo_fr10 frame = new Geo_fr10();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
+//	/**
+//	 * Launch the application.
+//	 */
+//	public static void main(String[] args) {
+//		EventQueue.invokeLater(new Runnable() {
+//			public void run() {
+//				try {
+//					Geo_fr10 frame = new Geo_fr10();
+//					frame.setVisible(true);
+//				} catch (Exception e) {
+//					e.printStackTrace();
+//				}
+//			}
+//		});
+//	}
 
 	/**
 	 * Create the frame.
 	 */
-	public Geo_fr10() {
+	public Geo_fr10(ScoreboardService scoreboardService, User user) {
+		super(scoreboardService,user);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setUndecorated(true);
 		setLocationRelativeTo(null);
@@ -139,12 +145,16 @@ public class Geo_fr10 extends JFrame {
 	     next_btn.addMouseListener(new MouseAdapter() {
 	     	@Override
 	     	public void mouseClicked(MouseEvent e) {
-	     		score++;
+	     		if (btnc.isSelected()) {
+					scoreboardService.updateQuestion(user.getUsername(), qID, true);
+				} else {
+					scoreboardService.updateQuestion(user.getUsername(), qID, false);
+				}
 				count++;
 				c++;
 				if (btna.isSelected() || btnb.isSelected() || btnc.isSelected() || btnd.isSelected()) {
 				dispose();
-				Geo_final frame1 = new Geo_final();
+				Geo_final frame1 = new Geo_final(scoreboardService, user);
 				frame1.setVisible(true);
 				} else {
 					JOptionPane.showMessageDialog(null, "\u03A0\u03B1\u03C1\u03B1\u03BA\u03B1\u03BB\u03CE \u03B5\u03C0\u03B9\u03BB\u03AD\u03BE\u03C4\u03B5 \u03BC\u03B9\u03B1 \u03B1\u03C0\u03CC \u03C4\u03B9\u03C2 \u03C0\u03C1\u03BF\u03C4\u03B5\u03B9\u03BD\u03CC\u03BC\u03B5\u03BD\u03B5\u03C2 \u03B1\u03C0\u03B1\u03BD\u03C4\u03AE\u03C3\u03B5\u03B9\u03C2");

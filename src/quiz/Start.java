@@ -1,4 +1,7 @@
 package quiz;
+import domain.User;
+import service.ScoreboardService;
+
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 import java.awt.event.FocusAdapter;
@@ -26,6 +29,8 @@ import java.awt.event.KeyEvent;
 
 public class Start extends JFrame {
 
+	private ScoreboardService scoreboardService = new ScoreboardService("scores.csv");
+	private User activeUser;
 	private Image startimg = new ImageIcon(getClass().getResource("icons/startbutton.png")).getImage().getScaledInstance(110, 110, Image.SCALE_SMOOTH);
 	private Image startimg1 = new ImageIcon(getClass().getResource("icons/start-button(2).png")).getImage().getScaledInstance(110, 110, Image.SCALE_SMOOTH);
 	private Image startimg2 = new ImageIcon(getClass().getResource("icons/start-button1.png")).getImage().getScaledInstance(110, 110, Image.SCALE_SMOOTH);
@@ -46,7 +51,7 @@ public class Start extends JFrame {
 					Start frame = new Start();
 					frame.setVisible(true);
 					frame.requestFocusInWindow();
-					
+
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -121,10 +126,24 @@ public class Start extends JFrame {
 		btnNewButton.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
+				try {
+					activeUser = scoreboardService.addUser(textField.getText());
+					if (activeUser == null) {
+						activeUser = scoreboardService.getUserByUsername(textField.getText());
+					}
+					if (activeUser == null) {
+						{
+							JOptionPane.showMessageDialog(null, "\u0391\u03C0\u03BF\u03C4\u03C5\u03C7\u03AF\u03B1 \u03B4\u03B7\u03BC\u03B9\u03BF\u03C5\u03C1\u03B3\u03AF\u03B1\u03C2 \u03C7\u03C1\u03AE\u03C3\u03C4\u03B7!");
+							Start.this.dispose();
+						}
+					}
+				} catch (Exception exception) {
+					exception.printStackTrace();
+				}
 				 btnNewButton.setIcon(new ImageIcon(startimg1));
 				if(a >= 1) {
 				    dispose();
-				    ChoiceMenu cframe = new ChoiceMenu();
+				    ChoiceMenu cframe = new ChoiceMenu(scoreboardService, activeUser);
 			        cframe.setVisible(true);
 					}
 					else {

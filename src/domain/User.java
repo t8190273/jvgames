@@ -1,4 +1,4 @@
-package omadiki.domain;
+package domain;
 
 import java.util.StringTokenizer;
 
@@ -48,9 +48,23 @@ public class User {
     }
 
     /**
-     * Calculates and returns the score
+     * Calculates and returns the score of one category
      * */
-    public Integer getScore() {
+    public Integer getScore(Integer start, Integer finish) {
+        int counter = 0;
+        for (int j = start; j <= finish; ++j) {
+            if (questions[j] != null && questions[j]) {
+                counter+= 3;
+            }
+        }
+        this.setScore(counter);
+        return score;
+    }
+
+    /**
+     * Calculates and returns the total score
+     * */
+    public Integer getTotalScore() {
         int counter = 0;
         for (Boolean q : this.getQuestions()) {
             if (q != null && q) {

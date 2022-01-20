@@ -20,12 +20,15 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.border.LineBorder;
 
 import cultu.Cultu_fr2;
+import domain.User;
 import histo.Hist_fr2;
+import service.ScoreboardService;
 
-public class Culture_frame extends JFrame {
+public class Culture_frame extends ScoreboardJFrame {
 
 	private JLabel lbl_q1;
     private JLabel lbl_question;
+	private final static Integer qID = 0;
 	
 	//radio btn//
 		JRadioButton btna, btnb, btnc, btnd;
@@ -44,26 +47,27 @@ public class Culture_frame extends JFrame {
 	
 	private JPanel contentPane;
 
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					Culture_frame frame = new Culture_frame();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
+//	/**
+//	 * Launch the application.
+//	 */
+//	public static void main(String[] args) {
+//		EventQueue.invokeLater(new Runnable() {
+//			public void run() {
+//				try {
+//					Culture_frame frame = new Culture_frame();
+//					frame.setVisible(true);
+//				} catch (Exception e) {
+//					e.printStackTrace();
+//				}
+//			}
+//		});
+//	}
 
 	/**
 	 * Create the frame.204, 255, 255
 	 */
-	public Culture_frame() {
+	public Culture_frame(ScoreboardService scoreboardService, User user) {
+		super(scoreboardService,user);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setUndecorated(true);
 		setLocationRelativeTo(null);
@@ -142,12 +146,16 @@ public class Culture_frame extends JFrame {
 	     next_btn.addMouseListener(new MouseAdapter() {
 	     	@Override
 	     	public void mouseClicked(MouseEvent e) {
-	     		score++;
+				if (btna.isSelected()) {
+					scoreboardService.updateQuestion(user.getUsername(), qID, true);
+				} else {
+					scoreboardService.updateQuestion(user.getUsername(), qID, false);
+				}
 				count++;
 				c++;
 				if (btna.isSelected() || btnb.isSelected() || btnc.isSelected() || btnd.isSelected()) {
 				dispose();
-				Cultu_fr2 frame1 = new Cultu_fr2();
+				Cultu_fr2 frame1 = new Cultu_fr2(scoreboardService, user);
 				frame1.setVisible(true);
 				} else {
 					JOptionPane.showMessageDialog(null, "\u03A0\u03B1\u03C1\u03B1\u03BA\u03B1\u03BB\u03CE \u03B5\u03C0\u03B9\u03BB\u03AD\u03BE\u03C4\u03B5 \u03BC\u03B9\u03B1 \u03B1\u03C0\u03CC \u03C4\u03B9\u03C2 \u03C0\u03C1\u03BF\u03C4\u03B5\u03B9\u03BD\u03CC\u03BC\u03B5\u03BD\u03B5\u03C2 \u03B1\u03C0\u03B1\u03BD\u03C4\u03AE\u03C3\u03B5\u03B9\u03C2");

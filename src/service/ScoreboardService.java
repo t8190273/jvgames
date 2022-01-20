@@ -1,7 +1,7 @@
-package omadiki.service;
+package service;
 
-import omadiki.domain.User;
-import omadiki.domain.UserComparator;
+import domain.User;
+import domain.UserComparator;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -52,8 +52,8 @@ public class ScoreboardService {
     }
 
     /**
-    * Save the scoreboard to file
-    * */
+     * Save the scoreboard to file
+     * */
     private void saveScoreboard() {
         try {
             FileWriter fileWriter = new FileWriter(saveLocation);
@@ -70,13 +70,27 @@ public class ScoreboardService {
     /**
      * Prints the scoreboard to a PrintStream
      * */
-    public void printScoreboard(ArrayList<User> scoreboard, PrintStream printStream) {
+    public void printScoreboard(ArrayList<User> scoreboard, PrintStream printStream, Integer start, Integer finish) {
         UserComparator userComparator = new UserComparator();
         scoreboard.sort(userComparator);
         StringBuilder stringBuilder = new StringBuilder();
         printStream.println("--------Scoreboard--------");
         for (User user : scoreboard) {
-            printStream.println(String.format("%3s", user.getScore().toString()) + " | " + user.getUsername());
+            printStream.println(String.format("%3s", user.getScore(start, finish).toString()) + " | " + user.getUsername());
+        }
+
+    }
+
+    /**
+     * Prints the scoreboard to a PrintStream
+     * */
+    public void printTotalScoreboard(ArrayList<User> scoreboard, PrintStream printStream) {
+        UserComparator userComparator = new UserComparator();
+        scoreboard.sort(userComparator);
+        StringBuilder stringBuilder = new StringBuilder();
+        printStream.println("--------Scoreboard--------");
+        for (User user : scoreboard) {
+            printStream.println(String.format("%3s", user.getTotalScore().toString()) + " | " + user.getUsername());
         }
 
     }
@@ -84,12 +98,27 @@ public class ScoreboardService {
     /**
      * Prints the scoreboard to the system.out stream and returns the scoreboard to the caller
      * */
-    public String[][] getScoreboard() {
-        printScoreboard(scoreboard, System.out);
+    public String[][] getScoreboard(Integer start, Integer finish) {
+        printScoreboard(scoreboard, System.out, start, finish);
         String[][] table = new String[scoreboard.size()][2];
         int i = 0;
         for (User user : scoreboard) {
-            table[i][0] = user.getScore().toString();
+            table[i][0] = user.getScore(start, finish).toString();
+            table[i][1] = user.getUsername();
+            i++;
+        }
+        return table;
+    }
+
+    /**
+     * Prints the scoreboard to the system.out stream and returns the scoreboard to the caller
+     * */
+    public String[][] getTotalScoreboard() {
+        printTotalScoreboard(scoreboard, System.out);
+        String[][] table = new String[scoreboard.size()][2];
+        int i = 0;
+        for (User user : scoreboard) {
+            table[i][0] = user.getTotalScore().toString();
             table[i][1] = user.getUsername();
             i++;
         }
@@ -102,13 +131,15 @@ public class ScoreboardService {
     public User addUser(String username) {
         User user = new User(username);
         if (userExists(username)) {
+            saveScoreboard();
             System.out.println("Error: Can't create user! Username: " +username+ " is already in use.");
             return null;
+        } else {
+            scoreboard.add(user);
+            saveScoreboard();
+            System.out.println("User with username: " +username+ " was created.");
+            return user;
         }
-        scoreboard.add(user);
-        saveScoreboard();
-        System.out.println("User with username: " +username+ " was created.");
-        return user;
     }
 
     /**
@@ -161,10 +192,21 @@ public class ScoreboardService {
     /**
      * Returns the scoreboard
      * */
-    public Integer getUserScore(String username) throws NullPointerException {
+    public Integer getUserScore(String username, Integer start, Integer finish) throws NullPointerException {
         User user =  getUserByUsername(username);
         if (user != null) {
-            return user.getScore();
+            return user.getScore(start, finish);
+        }
+        throw new NullPointerException("Error: User does not exist!");
+    }
+
+    /**
+     * Returns the scoreboard
+     * */
+    public Integer getUserTotalScore(String username) throws NullPointerException {
+        User user =  getUserByUsername(username);
+        if (user != null) {
+            return user.getTotalScore();
         }
         throw new NullPointerException("Error: User does not exist!");
     }

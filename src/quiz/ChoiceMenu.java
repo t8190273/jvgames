@@ -1,4 +1,8 @@
 package quiz;
+
+import domain.User;
+import service.ScoreboardService;
+
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 import java.awt.Font;
@@ -15,7 +19,7 @@ import javax.swing.border.EmptyBorder;
 import java.awt.Color;
 import javax.swing.border.LineBorder;
 
-public class ChoiceMenu extends JFrame {
+public class ChoiceMenu extends ScoreboardJFrame {
 
 	private Image questimg = new ImageIcon(ChoiceMenu.class.getResource("icons/question.png")).getImage().getScaledInstance(55, 55, Image.SCALE_SMOOTH);
 	private Image questimg1 = new ImageIcon(ChoiceMenu.class.getResource("icons/question1.png")).getImage().getScaledInstance(55, 55, Image.SCALE_SMOOTH);
@@ -39,27 +43,28 @@ public class ChoiceMenu extends JFrame {
 	private Image cul5img = new ImageIcon(ChoiceMenu.class.getResource("icons/vase.png")).getImage().getScaledInstance(55, 55, Image.SCALE_SMOOTH);
 	
 	private JPanel contentPane;
-
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					ChoiceMenu frame = new ChoiceMenu();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
+//
+//	/**
+//	 * Launch the application.
+//	 */
+//	public static void main(String[] args) {
+//		EventQueue.invokeLater(new Runnable() {
+//			public void run() {
+//				try {
+//					ChoiceMenu frame = new ChoiceMenu();
+//					frame.setVisible(true);
+//				} catch (Exception e) {
+//					e.printStackTrace();
+//				}
+//			}
+//		});
+//	}
 
 	/**
 	 * Create the frame.
 	 */
-	public ChoiceMenu() {
+	public ChoiceMenu(ScoreboardService scoreboardService, User user) {
+		super(scoreboardService,user);
 		setBackground(new Color(0, 51, 102));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setUndecorated(true);
@@ -121,7 +126,7 @@ public class ChoiceMenu extends JFrame {
 			public void mouseClicked(MouseEvent e) {
 				mythpanel.setBackground(new Color(0, 0, 102));
 				dispose();
-				Mythology_frame mframe= new Mythology_frame();
+				Mythology_frame mframe= new Mythology_frame(scoreboardService, user);
 				mframe.setVisible(true);
 			}
 		});
@@ -178,7 +183,7 @@ public class ChoiceMenu extends JFrame {
 			public void mouseClicked(MouseEvent e) {
 				historypanel.setBackground(new Color(102, 0, 0));
 				dispose();
-				History_frame hframe= new History_frame();
+				History_frame hframe= new History_frame(scoreboardService, user);
 				hframe.setVisible(true);
 			}
 		});
@@ -229,7 +234,7 @@ public class ChoiceMenu extends JFrame {
 			public void mouseClicked(MouseEvent e) {
 				geographypanel.setBackground(new Color(0, 51, 0));
 				dispose();
-				Geography_frame gframe= new Geography_frame();
+				Geography_frame gframe= new Geography_frame(scoreboardService, user);
 				gframe.setVisible(true);
 			}
 		});
@@ -281,7 +286,7 @@ public class ChoiceMenu extends JFrame {
 			public void mouseClicked(MouseEvent e) {
 				culturepanel.setBackground(new Color(51, 102, 153));
 				dispose();
-				Culture_frame cframe= new Culture_frame();
+				Culture_frame cframe= new Culture_frame(scoreboardService, user);
 				cframe.setVisible(true);
 			}
 		});

@@ -14,32 +14,36 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
+import domain.User;
 import quiz.ChoiceMenu;
+import quiz.ScoreboardJFrame;
+import service.ScoreboardService;
 
-public class Cultu_final extends JFrame {
+public class Cultu_final extends ScoreboardJFrame {
 
 	private JPanel contentPane;
 
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					Cultu_final frame = new Cultu_final();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
+//	public static void main(String[] args) {
+//		EventQueue.invokeLater(new Runnable() {
+//			public void run() {
+//				try {
+//					Cultu_final frame = new Cultu_final();
+//					frame.setVisible(true);
+//				} catch (Exception e) {
+//					e.printStackTrace();
+//				}
+//			}
+//		});
+//	}
 
 	/**
 	 * Create the frame.
 	 */
-	public Cultu_final() {
+	public Cultu_final(ScoreboardService scoreboardService, User user) {
+		super(scoreboardService,user);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setUndecorated(true);
@@ -63,13 +67,15 @@ public class Cultu_final extends JFrame {
 		lblNewLabel.setFont(new Font("Comic Sans MS", Font.PLAIN, 23));
 		lblNewLabel.setBounds(43, 79, 853, 86);
 		contentPane.add(lblNewLabel);
+
+		printGroupScore();
 		
 		JButton btnNewButton = new JButton("\u0395\u03C0\u03B9\u03C3\u03C4\u03C1\u03BF\u03C6\u03AE \u03C3\u03C4\u03B7\u03BD \u03B1\u03C1\u03C7\u03B9\u03BA\u03AE\r\n");
 		btnNewButton.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				dispose();
-				ChoiceMenu c = new ChoiceMenu();
+				ChoiceMenu c = new ChoiceMenu(scoreboardService, user);
 				c.setVisible(true);
 			}
 		});
@@ -93,5 +99,25 @@ public class Cultu_final extends JFrame {
 		    	 Exit.setForeground(Color.WHITE);
 		     }
 	});
+	}
+
+	private void printGroupScore() {
+		int start = 0;
+		int finish = 9;
+		String[][] table = scoreboardService.getScoreboard(start, finish);
+		int y = 85;
+		JLabel[] scoreLabels = new JLabel[table.length];
+		int i = 0;
+		for (String[] strings : table) {
+			scoreLabels[i] = new JLabel(strings[1] + " : " + strings[0] + " \u03C0\u03CC\u03BD\u03C4\u03BF\u03B9");
+			scoreLabels[i].setForeground(new Color(0, 0, 0));
+			scoreLabels[i].setBorder(new EmptyBorder(0, 0, 0, 0));
+			scoreLabels[i].setFont(new Font("Comic Sans MS", Font.PLAIN, 23));
+			scoreLabels[i].setBounds(43, y, 500, 300);
+			contentPane.add(scoreLabels[i]);
+			i++;
+			y+= 25;
+		}
+
 	}
 }

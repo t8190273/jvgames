@@ -1,5 +1,9 @@
 package myth;
 
+import domain.User;
+import quiz.ScoreboardJFrame;
+import service.ScoreboardService;
+
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.EventQueue;
@@ -20,10 +24,11 @@ import javax.swing.border.CompoundBorder;
 import javax.swing.border.EmptyBorder;
 import javax.swing.border.LineBorder;
 
-public class Myth_fr2 extends JFrame {
+public class Myth_fr2 extends ScoreboardJFrame {
 
 	private JLabel lbl_q1;
     private JLabel lblNewLabel;
+	private final static Integer qID = 31;
 	
 	//radio btn//
 		JRadioButton btna, btnb, btnc, btnd;
@@ -43,26 +48,27 @@ public class Myth_fr2 extends JFrame {
 	
 	private JPanel contentPane;
 
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					Myth_fr2 frame = new Myth_fr2();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
+//	/**
+//	 * Launch the application.
+//	 */
+//	public static void main(String[] args) {
+//		EventQueue.invokeLater(new Runnable() {
+//			public void run() {
+//				try {
+//					Myth_fr2 frame = new Myth_fr2();
+//					frame.setVisible(true);
+//				} catch (Exception e) {
+//					e.printStackTrace();
+//				}
+//			}
+//		});
+//	}
 
 	/**
 	 * Create the frame.
 	 */
-	public Myth_fr2() {
+	public Myth_fr2(ScoreboardService scoreboardService, User user) {
+		super(scoreboardService,user);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setUndecorated(true);
 		setLocationRelativeTo(null);
@@ -140,13 +146,17 @@ public class Myth_fr2 extends JFrame {
 	     next_btn.addMouseListener(new MouseAdapter() {
 	     	@Override
 	     	public void mouseClicked(MouseEvent e) {
-	     		score++;
+	     		if (btna.isSelected()) {
+					scoreboardService.updateQuestion(user.getUsername(), qID, true);
+				} else {
+					scoreboardService.updateQuestion(user.getUsername(), qID, false);
+				}
 				count++;
 				c++;
 				dispose();
 				if (btna.isSelected() || btnb.isSelected() || btnc.isSelected() || btnd.isSelected()) {
 					dispose();
-					Myth_fr3 frame1 = new Myth_fr3();
+					Myth_fr3 frame1 = new Myth_fr3(scoreboardService, user);
 					frame1.setVisible(true);
 					} else {
 						JOptionPane.showMessageDialog(null, "\u03A0\u03B1\u03C1\u03B1\u03BA\u03B1\u03BB\u03CE \u03B5\u03C0\u03B9\u03BB\u03AD\u03BE\u03C4\u03B5 \u03BC\u03B9\u03B1 \u03B1\u03C0\u03CC \u03C4\u03B9\u03C2 \u03C0\u03C1\u03BF\u03C4\u03B5\u03B9\u03BD\u03CC\u03BC\u03B5\u03BD\u03B5\u03C2 \u03B1\u03C0\u03B1\u03BD\u03C4\u03AE\u03C3\u03B5\u03B9\u03C2");
