@@ -30,10 +30,10 @@ public class Geo_fr8 extends JFrame {
 		//omada btn//
 		ButtonGroup bg;
 		//apanthseis- sunolo 4//
-		String ap1[] = {"α) Λυβικό Πέλαγος "}; /*Swsto*/
-	    String ap2[] = {"β) Μυρτώο Πέλαγος"};
-	    String ap3[] = {"γ) Ιόνιο Πέλαγος"};
-	    String ap4[] = {"δ) Αιγαίο Πέλαγος"};
+		String ap1[] = {"\u03B1) \u039B\u03C5\u03B2\u03B9\u03BA\u03CC \u03A0\u03AD\u03BB\u03B1\u03B3\u03BF\u03C2 "}; /*Swsto*/
+	    String ap2[] = {"\u03B2) \u039C\u03C5\u03C1\u03C4\u03CE\u03BF \u03A0\u03AD\u03BB\u03B1\u03B3\u03BF\u03C2"};
+	    String ap3[] = {"\u03B3) \u0399\u03CC\u03BD\u03B9\u03BF \u03A0\u03AD\u03BB\u03B1\u03B3\u03BF\u03C2"};
+	    String ap4[] = {"\u03B4) \u0391\u03B9\u03B3\u03B1\u03AF\u03BF \u03A0\u03AD\u03BB\u03B1\u03B3\u03BF\u03C2"};
 	
 	
 	private static int score=0;
@@ -123,19 +123,19 @@ public class Geo_fr8 extends JFrame {
 	     bg.add(btnc);
 	     bg.add(btnd);
 	     
-	     lbl_q1 = new JLabel("Ερώτηση 8");
+	     lbl_q1 = new JLabel("\u0395\u03C1\u03CE\u03C4\u03B7\u03C3\u03B7 8");
 	     lbl_q1.setForeground(new Color(204, 51, 51));
 	     lbl_q1.setFont(new Font("Mistral", Font.BOLD, 46));
 	     lbl_q1.setBounds(26, 37, 192, 61);
 	     panel.add(lbl_q1);
 	     
-	     lblNewLabel = new JLabel(" Η Ελλάδα στο νότιο μέρος της βρέχεται από το:");
+	     lblNewLabel = new JLabel("\u0397 \u0395\u03BB\u03BB\u03AC\u03B4\u03B1 \u03C3\u03C4\u03BF \u03BD\u03CC\u03C4\u03B9\u03BF \u03BC\u03AD\u03C1\u03BF\u03C2 \u03C4\u03B7\u03C2 \u03B2\u03C1\u03AD\u03C7\u03B5\u03C4\u03B1\u03B9 \u03B1\u03C0\u03CC \u03C4\u03BF:");
 	     lblNewLabel.setFont(new Font("Comic Sans MS", Font.PLAIN, 23));
 	     lblNewLabel.setForeground(new Color(0, 0, 102));
 	     lblNewLabel.setBounds(38, 109, 652, 70);
 	     panel.add(lblNewLabel);
 	     
-	     JButton next_btn = new JButton("Επόμενο");
+	     JButton next_btn = new JButton("\u0395\u03C0\u03CC\u03BC\u03B5\u03BD\u03BF");
 	     next_btn.addMouseListener(new MouseAdapter() {
 	     	@Override
 	     	public void mouseClicked(MouseEvent e) {
@@ -147,7 +147,7 @@ public class Geo_fr8 extends JFrame {
 				Geo_fr9 frame1 = new Geo_fr9();
 				frame1.setVisible(true);
 				} else {
-					JOptionPane.showMessageDialog(null, "Παρακαλώ επιλέξτε μια από τις προτεινόμενες απαντήσεις");
+					JOptionPane.showMessageDialog(null, "\u03A0\u03B1\u03C1\u03B1\u03BA\u03B1\u03BB\u03CE \u03B5\u03C0\u03B9\u03BB\u03AD\u03BE\u03C4\u03B5 \u03BC\u03B9\u03B1 \u03B1\u03C0\u03CC \u03C4\u03B9\u03C2 \u03C0\u03C1\u03BF\u03C4\u03B5\u03B9\u03BD\u03CC\u03BC\u03B5\u03BD\u03B5\u03C2 \u03B1\u03C0\u03B1\u03BD\u03C4\u03AE\u03C3\u03B5\u03B9\u03C2");
 				}
 	     	}
 	     });
@@ -173,7 +173,7 @@ public class Geo_fr8 extends JFrame {
 		Exit.addMouseListener(new MouseAdapter() {
 		     @Override
 		     public void mouseClicked(MouseEvent arg0) {
-		    	 if(JOptionPane.showConfirmDialog(null, "Είστε σίγουροι πως θέλετε να κλείσετε την εφαρμογή?", "Κλείσιμο", JOptionPane.YES_NO_OPTION) == 0) {
+		    	 if(JOptionPane.showConfirmDialog(null, "\u0395\u03AF\u03C3\u03C4\u03B5 \u03C3\u03AF\u03B3\u03BF\u03C5\u03C1\u03BF\u03B9 \u03C0\u03C9\u03C2 \u03B8\u03AD\u03BB\u03B5\u03C4\u03B5 \u03BD\u03B1 \u03BA\u03BB\u03B5\u03AF\u03C3\u03B5\u03C4\u03B5 \u03C4\u03B7\u03BD \u03B5\u03C6\u03B1\u03C1\u03BC\u03BF\u03B3\u03AE?", "\u039A\u03BB\u03B5\u03AF\u03C3\u03B9\u03BC\u03BF", JOptionPane.YES_NO_OPTION) == 0) {
 		    		Geo_fr8.this.dispose(); 
 		    	 }
 		}
