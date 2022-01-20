@@ -32,10 +32,10 @@ public class Culture_frame extends JFrame {
 		//omada btn//
 		ButtonGroup bg;
 		//apanthseis- sunolo 4//
-		String ap1[] = {"α) "};
-	    String ap2[] = {"β) "}; 
-	    String ap3[] = {"γ)"};
-	    String ap4[] = {"δ)"};
+		String ap1[] = {"\u03B1) "};
+	    String ap2[] = {"\u03B2) "}; 
+	    String ap3[] = {"\u03B3)"};
+	    String ap4[] = {"\u03B4)"};
 	
 	
 	private static int score=0;
@@ -125,20 +125,20 @@ public class Culture_frame extends JFrame {
 	     bg.add(btnc);
 	     bg.add(btnd);
 	     
-	     lbl_q1 = new JLabel("Ερώτηση 1");
+	     lbl_q1 = new JLabel("\u0395\u03C1\u03CE\u03C4\u03B7\u03C3\u03B7 1");
 	     lbl_q1.setForeground(new Color(0, 51, 102));
 	     lbl_q1.setFont(new Font("Mistral", Font.BOLD, 46));
 	     lbl_q1.setBounds(26, 37, 192, 61);
 	     panel.add(lbl_q1);
 	     
 	     //Erwthsh//
-	     lbl_question = new JLabel("Ερώτηση:");
+	     lbl_question = new JLabel("\u0395\u03C1\u03CE\u03C4\u03B7\u03C3\u03B7:");
 	     lbl_question.setFont(new Font("Comic Sans MS", Font.PLAIN, 23));
 	     lbl_question.setForeground(new Color(51, 51, 51));
 	     lbl_question.setBounds(38, 109, 652, 70);
 	     panel.add(lbl_question);
 	     
-	     JButton next_btn = new JButton("Åðüìåíï");
+	     JButton next_btn = new JButton("\u0395\u03C0\u03CC\u03BC\u03B5\u03BD\u03BF");
 	     next_btn.addMouseListener(new MouseAdapter() {
 	     	@Override
 	     	public void mouseClicked(MouseEvent e) {
@@ -150,7 +150,7 @@ public class Culture_frame extends JFrame {
 				Cultu_fr2 frame1 = new Cultu_fr2();
 				frame1.setVisible(true);
 				} else {
-					JOptionPane.showMessageDialog(null, "Παρακαλώ επιλέξτε μια από τις προτεινόμενες απαντήσεις");
+					JOptionPane.showMessageDialog(null, "\u03A0\u03B1\u03C1\u03B1\u03BA\u03B1\u03BB\u03CE \u03B5\u03C0\u03B9\u03BB\u03AD\u03BE\u03C4\u03B5 \u03BC\u03B9\u03B1 \u03B1\u03C0\u03CC \u03C4\u03B9\u03C2 \u03C0\u03C1\u03BF\u03C4\u03B5\u03B9\u03BD\u03CC\u03BC\u03B5\u03BD\u03B5\u03C2 \u03B1\u03C0\u03B1\u03BD\u03C4\u03AE\u03C3\u03B5\u03B9\u03C2");
 				}
 	     	}
 	     });
@@ -176,7 +176,7 @@ public class Culture_frame extends JFrame {
 		Exit.addMouseListener(new MouseAdapter() {
 		     @Override
 		     public void mouseClicked(MouseEvent arg0) {
-		    	 if(JOptionPane.showConfirmDialog(null, "Είστε σίγουροι πως θέλετε να κλείσετε την εφαρμογή?", "Κλείσιμο", JOptionPane.YES_NO_OPTION) == 0) {
+		    	 if(JOptionPane.showConfirmDialog(null, "\u0395\u03AF\u03C3\u03C4\u03B5 \u03C3\u03AF\u03B3\u03BF\u03C5\u03C1\u03BF\u03B9 \u03C0\u03C9\u03C2 \u03B8\u03AD\u03BB\u03B5\u03C4\u03B5 \u03BD\u03B1 \u03BA\u03BB\u03B5\u03AF\u03C3\u03B5\u03C4\u03B5 \u03C4\u03B7\u03BD \u03B5\u03C6\u03B1\u03C1\u03BC\u03BF\u03B3\u03AE?", "\u039A\u03BB\u03B5\u03AF\u03C3\u03B9\u03BC\u03BF", JOptionPane.YES_NO_OPTION) == 0) {
 		    		Culture_frame.this.dispose(); 
 		    	 }
 		}
