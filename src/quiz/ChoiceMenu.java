@@ -327,7 +327,7 @@ public class ChoiceMenu extends JFrame {
 		Exit.addMouseListener(new MouseAdapter() {
 		     @Override
 		     public void mouseClicked(MouseEvent arg0) {
-		    	 if(JOptionPane.showConfirmDialog(null, "Είστε σίγουροι πως θέλετε να κλείσετε την εφαρμογή?", "Κλείσιμο", JOptionPane.YES_NO_OPTION) == 0) {
+		    	 if(JOptionPane.showConfirmDialog(null, "Ξ•Ξ―ΟƒΟ„Ξµ ΟƒΞ―Ξ³ΞΏΟ…ΟΞΏΞΉ Ο€Ο‰Ο‚ ΞΈΞ­Ξ»ΞµΟ„Ξµ Ξ½Ξ± ΞΊΞ»ΞµΞ―ΟƒΞµΟ„Ξµ Ο„Ξ·Ξ½ ΞµΟ†Ξ±ΟΞΌΞΏΞ³Ξ®?", "ΞΞ»ΞµΞ―ΟƒΞΉΞΌΞΏ", JOptionPane.YES_NO_OPTION) == 0) {
 		    		ChoiceMenu.this.dispose(); 
 		    	 }
 		}
