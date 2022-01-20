@@ -30,7 +30,7 @@ public class Myth_fr9 extends JFrame {
 		//omada btn//
 		ButtonGroup bg;
 		//apanthseis- sunolo 4//
-		String ap1[] = {"\u03B1) \u03A3\u03C6\u03AF\u03B3\u03B3\u03B1};
+		String ap1[] = {"\u03B1) \u03A3\u03C6\u03AF\u03B3\u03B3\u03B1"};
 	    String ap2[] = {"\u03B2) \u03A3\u03BA\u03CD\u03BB\u03B1"};
 	    String ap3[] = {"\u03B3) \u03A7\u03AC\u03C1\u03B9\u03B2\u03B4\u03B7"};
 	    String ap4[] = {"\u03B4) \u039A\u03AD\u03C1\u03B2\u03B5\u03C1\u03BF\u03C2"}; /*Swsto*/
