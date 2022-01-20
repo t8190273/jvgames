@@ -32,10 +32,10 @@ public class Culture_frame extends JFrame {
 		//omada btn//
 		ButtonGroup bg;
 		//apanthseis- sunolo 4//
-		String ap1[] = {"α) Ψηλορείτης"};
-	    String ap2[] = {"β) Όλυμπος"}; /*Swsto*/
-	    String ap3[] = {"γ) Τριγγία "};
-	    String ap4[] = {"δ) Σμόλικας"};
+		String ap1[] = {"Ξ±) "};
+	    String ap2[] = {"Ξ²) "}; 
+	    String ap3[] = {"Ξ³)"};
+	    String ap4[] = {"Ξ΄)"};
 	
 	
 	private static int score=0;
@@ -125,20 +125,20 @@ public class Culture_frame extends JFrame {
 	     bg.add(btnc);
 	     bg.add(btnd);
 	     
-	     lbl_q1 = new JLabel("Ερώτηση 1");
+	     lbl_q1 = new JLabel("Ξ•ΟΟΟ„Ξ·ΟƒΞ· 1");
 	     lbl_q1.setForeground(new Color(0, 51, 102));
 	     lbl_q1.setFont(new Font("Mistral", Font.BOLD, 46));
 	     lbl_q1.setBounds(26, 37, 192, 61);
 	     panel.add(lbl_q1);
 	     
 	     //Erwthsh//
-	     lbl_question = new JLabel("Το υψηλότερο βουνό της Ελλάδας είναι:");
+	     lbl_question = new JLabel("Ξ•ΟΟΟ„Ξ·ΟƒΞ·:");
 	     lbl_question.setFont(new Font("Comic Sans MS", Font.PLAIN, 23));
 	     lbl_question.setForeground(new Color(51, 51, 51));
 	     lbl_question.setBounds(38, 109, 652, 70);
 	     panel.add(lbl_question);
 	     
-	     JButton next_btn = new JButton("Επόμενο");
+	     JButton next_btn = new JButton("Γ…Γ°ΓΌΓ¬Γ¥Γ­Γ―");
 	     next_btn.addMouseListener(new MouseAdapter() {
 	     	@Override
 	     	public void mouseClicked(MouseEvent e) {
@@ -150,7 +150,7 @@ public class Culture_frame extends JFrame {
 				Cultu_fr2 frame1 = new Cultu_fr2();
 				frame1.setVisible(true);
 				} else {
-					JOptionPane.showMessageDialog(null, "Παρακαλώ επιλέξτε μια από τις προτεινόμενες απαντήσεις");
+					JOptionPane.showMessageDialog(null, "Ξ Ξ±ΟΞ±ΞΊΞ±Ξ»Ο ΞµΟ€ΞΉΞ»Ξ­ΞΎΟ„Ξµ ΞΌΞΉΞ± Ξ±Ο€Ο Ο„ΞΉΟ‚ Ο€ΟΞΏΟ„ΞµΞΉΞ½ΟΞΌΞµΞ½ΞµΟ‚ Ξ±Ο€Ξ±Ξ½Ο„Ξ®ΟƒΞµΞΉΟ‚");
 				}
 	     	}
 	     });
@@ -176,7 +176,7 @@ public class Culture_frame extends JFrame {
 		Exit.addMouseListener(new MouseAdapter() {
 		     @Override
 		     public void mouseClicked(MouseEvent arg0) {
-		    	 if(JOptionPane.showConfirmDialog(null, "Είστε σίγουροι πως θέλετε να κλείσετε την εφαρμογή?", "Κλείσιμο", JOptionPane.YES_NO_OPTION) == 0) {
+		    	 if(JOptionPane.showConfirmDialog(null, "Ξ•Ξ―ΟƒΟ„Ξµ ΟƒΞ―Ξ³ΞΏΟ…ΟΞΏΞΉ Ο€Ο‰Ο‚ ΞΈΞ­Ξ»ΞµΟ„Ξµ Ξ½Ξ± ΞΊΞ»ΞµΞ―ΟƒΞµΟ„Ξµ Ο„Ξ·Ξ½ ΞµΟ†Ξ±ΟΞΌΞΏΞ³Ξ®?", "ΞΞ»ΞµΞ―ΟƒΞΉΞΌΞΏ", JOptionPane.YES_NO_OPTION) == 0) {
 		    		Culture_frame.this.dispose(); 
 		    	 }
 		}
