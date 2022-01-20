@@ -32,10 +32,10 @@ public class Hist_fr2 extends JFrame {
 			//omada btn//
 			ButtonGroup bg;
 			//apanthseis- sunolo 4//
-			String ap1[] = {"α) Αλέξανδρο Μαυροκορδάτο"};
-		    String ap2[] = {"β) Ανδρέα Μεταξά "};
-		    String ap3[] = {"γ) Ιωάννη Κωλέττη"}; /*Swsto*/
-		    String ap4[] = {"δ) Ιωάννη Καποδίστρια "};
+			String ap1[] = {"\u03B1) \u0391\u03BB\u03AD\u03BE\u03B1\u03BD\u03B4\u03C1\u03BF \u039C\u03B1\u03C5\u03C1\u03BF\u03BA\u03BF\u03C1\u03B4\u03AC\u03C4\u03BF"};
+		    String ap2[] = {"\u03B2) \u0391\u03BD\u03B4\u03C1\u03AD\u03B1 \u039C\u03B5\u03C4\u03B1\u03BE\u03AC"};
+		    String ap3[] = {"\u03B3) \u0399\u03C9\u03AC\u03BD\u03BD\u03B7 \u039A\u03C9\u03BB\u03AD\u03C4\u03C4\u03B7"}; /*Swsto*/
+		    String ap4[] = {"\u03B4) \u0399\u03C9\u03AC\u03BD\u03BD\u03B7 \u039A\u03B1\u03C0\u03BF\u03B4\u03AF\u03C3\u03C4\u03C1\u03B9\u03B1"};
 		
 		
 		private static int score=0;
@@ -132,7 +132,7 @@ public class Hist_fr2 extends JFrame {
 	     lbl_q1.setBounds(26, 37, 192, 61);
 	     panel.add(lbl_q1);
 	     
-	     lbl_question = new JLabel("Το Γαλλικό κόμμα που ιδρύθηκε το 1824 στο νέο ανεξάρτητο Ελληνικό κράτος είχε αρχηγό τον:");
+	     lbl_question = new JLabel("\u03A4\u03BF \u0393\u03B1\u03BB\u03BB\u03B9\u03BA\u03CC \u03BA\u03CC\u03BC\u03BC\u03B1 \u03C0\u03BF\u03C5 \u03B9\u03B4\u03C1\u03CD\u03B8\u03B7\u03BA\u03B5 \u03C4\u03BF 1824 \u03C3\u03C4\u03BF \u03BD\u03AD\u03BF \u03B1\u03BD\u03B5\u03BE\u03AC\u03C1\u03C4\u03B7\u03C4\u03BF \u0395\u03BB\u03BB\u03B7\u03BD\u03B9\u03BA\u03CC \u03BA\u03C1\u03AC\u03C4\u03BF\u03C2 \u03B5\u03AF\u03C7\u03B5 \u03B1\u03C1\u03C7\u03B7\u03B3\u03CC \u03C4\u03BF\u03BD:");
 	     lbl_question.setFont(new Font("Comic Sans MS", Font.PLAIN, 20));
 	     lbl_question.setForeground(new Color(102, 255, 255));
 	     lbl_question.setBounds(10, 86, 873, 93);
@@ -150,7 +150,7 @@ public class Hist_fr2 extends JFrame {
 				Hist_fr3 frame1 = new Hist_fr3();
 				frame1.setVisible(true);
 				} else {
-					JOptionPane.showMessageDialog(null, "Παρακαλώ επιλέξτε μια από τις προτεινόμενες απαντήσεις");
+					JOptionPane.showMessageDialog(null, "\u03A0\u03B1\u03C1\u03B1\u03BA\u03B1\u03BB\u03CE \u03B5\u03C0\u03B9\u03BB\u03AD\u03BE\u03C4\u03B5 \u03BC\u03B9\u03B1 \u03B1\u03C0\u03CC \u03C4\u03B9\u03C2 \u03C0\u03C1\u03BF\u03C4\u03B5\u03B9\u03BD\u03CC\u03BC\u03B5\u03BD\u03B5\u03C2 \u03B1\u03C0\u03B1\u03BD\u03C4\u03AE\u03C3\u03B5\u03B9\u03C2");
 				}
 	     	}
 	     });
@@ -176,7 +176,7 @@ public class Hist_fr2 extends JFrame {
 		Exit.addMouseListener(new MouseAdapter() {
 		     @Override
 		     public void mouseClicked(MouseEvent arg0) {
-		    	 if(JOptionPane.showConfirmDialog(null, "Είστε σίγουροι πως θέλετε να κλείσετε την εφαρμογή?", "Κλείσιμο", JOptionPane.YES_NO_OPTION) == 0) {
+		    	 if(JOptionPane.showConfirmDialog(null, "\u0395\u03AF\u03C3\u03C4\u03B5 \u03C3\u03AF\u03B3\u03BF\u03C5\u03C1\u03BF\u03B9 \u03C0\u03C9\u03C2 \u03B8\u03AD\u03BB\u03B5\u03C4\u03B5 \u03BD\u03B1 \u03BA\u03BB\u03B5\u03AF\u03C3\u03B5\u03C4\u03B5 \u03C4\u03B7\u03BD \u03B5\u03C6\u03B1\u03C1\u03BC\u03BF\u03B3\u03AE?", "\u039A\u03BB\u03B5\u03AF\u03C3\u03B9\u03BC\u03BF", JOptionPane.YES_NO_OPTION) == 0) {
 		    		Hist_fr2.this.dispose(); 
 		    	 }
 		}
