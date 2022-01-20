@@ -33,10 +33,10 @@ public class History_frame extends JFrame {
 		//omada btn//
 		ButtonGroup bg;
 		//apanthseis- sunolo 4//
-		String ap1[] = {"α) υπο Αγγλική κατοχή"}; /*Swsto*/
-	    String ap2[] = {"β) υπο Οθωμανική κατοχή"};
-	    String ap3[] = {"γ) υπο Γαλλική κατοχή "};
-	    String ap4[] = {"δ) υπο Ρωσική κατοχή "};
+		String ap1[] = {"Ξ±) Ο…Ο€ΞΏ Ξ‘Ξ³Ξ³Ξ»ΞΉΞΊΞ® ΞΊΞ±Ο„ΞΏΟ‡Ξ®"}; /*Swsto*/
+	    String ap2[] = {"Ξ²) Ο…Ο€ΞΏ ΞΞΈΟ‰ΞΌΞ±Ξ½ΞΉΞΊΞ® ΞΊΞ±Ο„ΞΏΟ‡Ξ®"};
+	    String ap3[] = {"Ξ³) Ο…Ο€ΞΏ Ξ“Ξ±Ξ»Ξ»ΞΉΞΊΞ® ΞΊΞ±Ο„ΞΏΟ‡Ξ® "};
+	    String ap4[] = {"Ξ΄) Ο…Ο€ΞΏ Ξ΅Ο‰ΟƒΞΉΞΊΞ® ΞΊΞ±Ο„ΞΏΟ‡Ξ® "};
 	
 	
 	private static int score=0;
@@ -133,7 +133,7 @@ public class History_frame extends JFrame {
 	     panel.add(lbl_q1);
 	     
 	     //Erwthsh//
-	     lbl_question = new JLabel("Τα Ιόνια νησιά πριν περιέλθουν υπο τον ελεγχο του ελληνικού κράτους το 1864 βρίσκονταν:");
+	     lbl_question = new JLabel("Ξ¤Ξ± Ξ™ΟΞ½ΞΉΞ± Ξ½Ξ·ΟƒΞΉΞ¬ Ο€ΟΞΉΞ½ Ο€ΞµΟΞΉΞ­Ξ»ΞΈΞΏΟ…Ξ½ Ο…Ο€ΞΏ Ο„ΞΏΞ½ ΞµΞ»ΞµΞ³Ο‡ΞΏ Ο„ΞΏΟ… ΞµΞ»Ξ»Ξ·Ξ½ΞΉΞΊΞΏΟ ΞΊΟΞ¬Ο„ΞΏΟ…Ο‚ Ο„ΞΏ 1864 Ξ²ΟΞ―ΟƒΞΊΞΏΞ½Ο„Ξ±Ξ½:");
 	     lbl_question.setFont(new Font("Comic Sans MS", Font.PLAIN, 20));
 	     lbl_question.setForeground(new Color(102, 255, 255));
 	     lbl_question.setBounds(26, 109, 847, 70);
@@ -151,7 +151,7 @@ public class History_frame extends JFrame {
 				Hist_fr2 frame1 = new Hist_fr2();
 				frame1.setVisible(true);
 				} else {
-					JOptionPane.showMessageDialog(null, "Παρακαλώ επιλέξτε μια από τις προτεινόμενες απαντήσεις");
+					JOptionPane.showMessageDialog(null, "Ξ Ξ±ΟΞ±ΞΊΞ±Ξ»Ο ΞµΟ€ΞΉΞ»Ξ­ΞΎΟ„Ξµ ΞΌΞΉΞ± Ξ±Ο€Ο Ο„ΞΉΟ‚ Ο€ΟΞΏΟ„ΞµΞΉΞ½ΟΞΌΞµΞ½ΞµΟ‚ Ξ±Ο€Ξ±Ξ½Ο„Ξ®ΟƒΞµΞΉΟ‚");
 				}
 	     	}
 	     });
@@ -177,7 +177,7 @@ public class History_frame extends JFrame {
 		Exit.addMouseListener(new MouseAdapter() {
 		     @Override
 		     public void mouseClicked(MouseEvent arg0) {
-		    	 if(JOptionPane.showConfirmDialog(null, "Είστε σίγουροι πως θέλετε να κλείσετε την εφαρμογή?", "Κλείσιμο", JOptionPane.YES_NO_OPTION) == 0) {
+		    	 if(JOptionPane.showConfirmDialog(null, "Ξ•Ξ―ΟƒΟ„Ξµ ΟƒΞ―Ξ³ΞΏΟ…ΟΞΏΞΉ Ο€Ο‰Ο‚ ΞΈΞ­Ξ»ΞµΟ„Ξµ Ξ½Ξ± ΞΊΞ»ΞµΞ―ΟƒΞµΟ„Ξµ Ο„Ξ·Ξ½ ΞµΟ†Ξ±ΟΞΌΞΏΞ³Ξ®?", "ΞΞ»ΞµΞ―ΟƒΞΉΞΌΞΏ", JOptionPane.YES_NO_OPTION) == 0) {
 		    		History_frame.this.dispose(); 
 		    	 }
 		}
