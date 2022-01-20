@@ -35,10 +35,20 @@ public class Culture_frame extends ScoreboardJFrame {
 		//omada btn//
 		ButtonGroup bg;
 		//apanthseis- sunolo 4//
-		String ap1[] = {"\u03B1) "};
-	    String ap2[] = {"\u03B2) "}; 
-	    String ap3[] = {"\u03B3)"};
-	    String ap4[] = {"\u03B4)"};
+		String ap1[] = {"\u{391}. \u{3BC}\u{3B9}\u{3BA}\u{3C1}\u{3B1}\u{3AF}\u{3BD}\u{3BF}\u{3C5}\u{3BD} \u{3C3}\u{3B5}
+		\u{3C3}\u{3C7}\u{3AD}\u{3C3}\u{3B7} \u{3BC}\u{3B5} \u{3C4}\u{3BF}\u{3C5}\u{3C2}
+		\u{3C0}\u{3C1}\u{3BF}\u{3B7}\u{3B3}\u{3BF}\u{3CD}\u{3BC}\u{3B5}\u{3BD}\u{3BF}\u{3C5}\u{3C2}
+		\u{3BF}\u{3B9}\u{3BA}\u{3B9}\u{3C3}\u{3BC}\u{3BF}\u{3CD}\u{3C2} \u{3C4}\u{3B7}\u{3C2}
+		3\u{3B7}\u{3C2} \u{3C7}\u{3B9}\u{3BB}\u{3B9}\u{3B5}\u{3C4}\u{3AF}\u{3B1}\u{3C2}
+		\u{3C0}.\u{3A7} "};
+	    String ap2[] = {"\u{392}. \u{3BC}\u{3AD}\u{3BD}\u{3BF}\u{3C5}\u{3BD} \u{3AF}\u{3B4}\u{3B9}\u{3BF}\u{3B9}
+		\u{3BC}\u{3B5} \u{3C4}\u{3BF}\u{3C5}\u{3C2}
+		\u{3BF}\u{3B9}\u{3BA}\u{3B9}\u{3C3}\u{3BC}\u{3BF}\u{3CD}\u{3C2} \u{3C4}\u{3B7}\u{3C2}
+		3\u{3B7}\u{3C2} \u{3C7}\u{3B9}\u{3BB}\u{3B9}\u{3B5}\u{3C4}\u{3AF}\u{3B1}\u{3C2}
+		\u{3C0}.\u{3A7} "}; 
+	    String ap3[] = {"\u{393}. \u{3BC}\u{3B5}\u{3B3}\u{3B1}\u{3BB}\u{3CE}\u{3BD}\u{3BF}\u{3C5}\u{3BD}\n
+		"}; /**swsto **/
+	    String ap4[] = {"\u{39A}\u{3B1}\u{3BD}\u{3AD}\u{3BD}\u{3B1} \u{391}\u{3C0}\u{3CC} \u{3C4}\u{3B1} \u{3C0}\u{3B1}\u{3C1}\u{3B1}\u{3C0}\u{3AC}\u{3BD}\u{3C9}"};
 	
 	
 	private static int score=0;
@@ -136,7 +146,8 @@ public class Culture_frame extends ScoreboardJFrame {
 	     panel.add(lbl_q1);
 	     
 	     //Erwthsh//
-	     lbl_question = new JLabel("\u0395\u03C1\u03CE\u03C4\u03B7\u03C3\u03B7:");
+	     lbl_question = new JLabel("\u039F\u03B9 \u03BF\u03B9\u03BA\u03B9\u03C3\u03BC\u03BF\u03AF \u03C4\u03B7 2\u03B7
+		 \u03C7\u03B9\u03BB\u03B9\u03B5\u03C4\u03AF\u03B1 \u03C0.\u03A7.:");
 	     lbl_question.setFont(new Font("Comic Sans MS", Font.PLAIN, 23));
 	     lbl_question.setForeground(new Color(51, 51, 51));
 	     lbl_question.setBounds(38, 109, 652, 70);
@@ -146,7 +157,7 @@ public class Culture_frame extends ScoreboardJFrame {
 	     next_btn.addMouseListener(new MouseAdapter() {
 	     	@Override
 	     	public void mouseClicked(MouseEvent e) {
-				if (btna.isSelected()) {
+				if (btnc.isSelected()) {
 					scoreboardService.updateQuestion(user.getUsername(), qID, true);
 				} else {
 					scoreboardService.updateQuestion(user.getUsername(), qID, false);
