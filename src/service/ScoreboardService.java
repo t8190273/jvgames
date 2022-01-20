@@ -36,12 +36,24 @@ public class ScoreboardService {
         ArrayList<User> users = new ArrayList<User>();
         try {
             File file = new File(saveLocation);
-            Scanner scanner = new Scanner(file);
-            while (scanner.hasNextLine()) {
-                users.add(User.fromString(scanner.nextLine()));
+            if (file.exists()) {
+                Scanner scanner = new Scanner(file);
+                while (scanner.hasNextLine()) {
+                    users.add(User.fromString(scanner.nextLine()));
+                }
+                saveScoreboard();
+                scanner.close();
+            } else {
+               if (file.createNewFile()) {
+                   Scanner scanner = new Scanner(file);
+                   while (scanner.hasNextLine()) {
+                       users.add(User.fromString(scanner.nextLine()));
+                   }
+                   saveScoreboard();
+                   scanner.close();
+               }
             }
-            saveScoreboard();
-            scanner.close();
+
         } catch (Exception e) {
             System.out.println("Error while writing to file");
             e.printStackTrace();
